@@ -1,12 +1,15 @@
+//Плагины, используемые в модуле
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
 
+//Настройки сборки, специфичные для Android
 android {
     namespace 'com.example.gradleplayground'
     compileSdk 33
 
+    //Дефолтные настройки для всех build variants
     defaultConfig {
         applicationId "com.example.gradleplayground"
         minSdk 24
@@ -17,9 +20,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    //Типы сборки (по дефолту: debug(неявно - в defaultConfig), release).
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled false //включает сжатие
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -30,10 +34,14 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    //Тут можно добавить productFlavors{ free, paid ... }
 }
 
+//Зависимости для данного модуля
 dependencies {
+    //implementation project(":lib") - зависимость от модуля в проекте
 
+    // зависимости от удалённых библиотек
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'

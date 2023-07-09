@@ -1,5 +1,8 @@
+// Задаёт настройки репозитория всего проекта
+// Указывает какие модули содержатся в проекте
 pluginManagement {
     repositories {
+        // Репы, откуда Gradle качает плагины
         google()
         mavenCentral()
         gradlePluginPortal()
@@ -8,9 +11,11 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        // Репы, откуда Gradle качает зависимости для всех модулей
         google()
         mavenCentral()
     }
 }
 rootProject.name = "GradlePlayground"
+//Модули:
 include ':app'
