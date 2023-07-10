@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name=".TestLibActivity"
+            android:name=".TestLib2Activity"
             android:exported="false" />
     </application>
 

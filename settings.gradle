@@ -20,3 +20,4 @@ rootProject.name = "GradlePlayground"
 //Модули:
 include ':app'
 include ':testlib'
+include ':testlib2'
